@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Platform Comparison — Zomato vs Swiggy · Dec 2025 to Mar 2026</title>
+<title>Performance Intelligence — Story Coffee Group Analysis</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -13,73 +13,44 @@
   --zom:#e23744;--swi:#fc4f00;
   --grn:#3ecf8e;--blu:#4e9eff;--pur:#a78bfa;--amb:#ffb347;
 }
-body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;line-height:1.6}
-.page{max-width:1040px;margin:0 auto;padding:40px 20px 80px}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px;line-height:1.6}
+.page{max-width:1100px;margin:0 auto;padding:40px 20px 80px}
 
 .eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;background:linear-gradient(90deg,var(--zom),var(--swi));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-h1{font-size:clamp(26px,5vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.05;margin-bottom:12px}
+h1{font-size:clamp(26px,5vw,38px);font-weight:800;letter-spacing:-.02em;line-height:1.05;margin-bottom:12px}
 h1 em{font-style:normal;color:var(--amb)}
 .hmeta{font-size:12px;color:var(--mu);display:flex;flex-wrap:wrap;gap:16px;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--bo2)}
-.hmeta span{display:flex;align-items:center;gap:5px}
-.hmeta span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--amb)}
 
-/* platform badges */
-.zbadge{display:inline-flex;align-items:center;gap:5px;background:rgba(226,55,68,.15);color:var(--zom);font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px}
-.sbadge{display:inline-flex;align-items:center;gap:5px;background:rgba(252,79,0,.15);color:var(--swi);font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px}
-.zbadge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--zom)}
-.sbadge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--swi)}
+.pcard{background:var(--sur);border:1px solid var(--bo);border-radius:10px;padding:20px;margin-bottom:20px}
+.pcard-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;border-bottom:1px solid var(--bo);padding-bottom:12px}
+.kpi-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.km{background:var(--sur2);border-radius:8px;padding:10px}
+.km-l{font-size:9px;font-weight:700;color:var(--mu);text-transform:uppercase}
+.km-v{font-size:16px;font-weight:800;color:var(--tx)}
 
-/* summary cards */
-.platform-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px}
-.pcard{background:var(--sur);border:1px solid var(--bo);border-radius:10px;padding:20px}
-.pcard-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--bo)}
-.pcard-title{font-size:16px;font-weight:700}
-.kpi-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.km{background:var(--sur2);border-radius:8px;padding:10px 12px}
-.km-l{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mu);margin-bottom:3px}
-.km-v{font-size:18px;font-weight:800;letter-spacing:-.01em;color:var(--tx)}
-.km-s{font-size:10px;color:var(--mu)}
+.krow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:40px}
+.kpi{background:var(--sur);padding:16px;border-radius:10px;border-left:3px solid var(--kc,var(--amb))}
+.kl{font-size:10px;font-weight:700;color:var(--mu);text-transform:uppercase}
+.kv{font-size:22px;font-weight:800;color:var(--tx)}
 
-/* KPI comparison strip */
-.krow{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:40px;border:1px solid var(--bo2);border-radius:10px;overflow:hidden}
-.kpi{background:var(--sur);padding:16px 14px;border-top:2px solid var(--kc,var(--amb))}
-.kl{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mu);margin-bottom:5px}
-.kv{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1;color:var(--tx)}
-.ks{font-size:10px;color:var(--mu);margin-top:4px}
-
-/* nav */
-.nav{display:flex;gap:0;border-bottom:1px solid var(--bo2);margin-bottom:32px;overflow-x:auto}
-.nav-tab{padding:10px 18px;font-size:13px;font-weight:600;cursor:pointer;background:none;border:none;color:var(--mu);border-bottom:2px solid transparent;white-space:nowrap;transition:all .15s}
+.nav{display:flex;gap:4px;border-bottom:1px solid var(--bo2);margin-bottom:32px;overflow-x:auto}
+.nav-tab{padding:10px 18px;font-size:13px;font-weight:600;cursor:pointer;background:none;border:none;color:var(--mu);border-bottom:2px solid transparent;white-space:nowrap}
 .nav-tab.active{color:var(--tx);border-bottom-color:var(--amb)}
-.nav-tab:hover:not(.active){color:var(--tx)}
 .view{display:none}.view.active{display:block}
 
-.section{margin-bottom:40px}
-h2{font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:6px;color:var(--tx)}
-.sub{font-size:12px;color:var(--mu);margin-bottom:16px}
-.card{background:var(--sur);border:1px solid var(--bo);border-radius:10px;padding:20px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:var(--sur);border:1px solid var(--bo);border-radius:12px;padding:24px;margin-bottom:24px}
+h2{font-size:16px;font-weight:700;margin-bottom:16px}
 
-select.ctl{background:var(--sur2);border:1px solid var(--bo2);color:var(--tx);font-size:12px;padding:4px 8px;border-radius:6px;cursor:pointer;outline:none}
-.ctrl{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
-.ctrl-label{font-size:11px;font-weight:600;color:var(--mu);text-transform:uppercase;letter-spacing:.06em}
-.leg{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px;font-size:12px;color:var(--mu)}
-.leg span{display:flex;align-items:center;gap:5px}
-.ld{width:10px;height:10px;border-radius:2px;flex-shrink:0}
-
-/* Inference Styles */
-.inf-box{margin-top:20px;padding:15px;background:rgba(255,179,71,0.05);border-left:3px solid var(--amb);border-radius:0 8px 8px 0}
-.inf-box h4{font-size:12px;text-transform:uppercase;color:var(--amb);margin-bottom:8px;letter-spacing:0.05em}
-.inf-text{font-size:13px;color:var(--tx);margin-bottom:10px}
-.inf-sug{font-size:12px;color:var(--mu);padding-top:8px;border-top:1px solid var(--bo)}
-.inf-sug strong{color:var(--grn)}
+.analysis-box{margin-top:24px;padding:16px;background:var(--sur2);border-radius:8px;border-left:4px solid var(--amb)}
+.analysis-title{font-size:11px;font-weight:800;text-transform:uppercase;color:var(--amb);margin-bottom:8px;display:block}
+.inference{font-size:13px;color:var(--tx);margin-bottom:10px;line-height:1.5}
+.suggestion{font-size:12px;color:var(--mu);font-style:italic}
+.suggestion strong{color:var(--grn);font-weight:700;font-style:normal}
 
 svg.chart{width:100%;display:block;overflow:visible}
-.al{stroke:rgba(255,255,255,.06);stroke-width:.5}
+.al{stroke:rgba(255,255,255,.05);stroke-width:.5}
 .ax{fill:#555860;font-size:10px}
-.lp{fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.v-label{font-size:9px;font-weight:700}
-.ap{stroke:none}.bh{cursor:pointer}
+.vlab{font-size:9px;font-weight:700}
 
 #tt{position:fixed;background:var(--sur3);border:1px solid var(--bo2);border-radius:8px;padding:10px 14px;font-size:12px;pointer-events:none;display:none;z-index:999;max-width:240px;line-height:1.9}
 #tt .ttt{font-weight:700;margin-bottom:4px;color:var(--tx);font-size:13px}
@@ -87,197 +58,105 @@ svg.chart{width:100%;display:block;overflow:visible}
 #tt .ttr .lb{color:var(--mu)}.ttr .vl{font-weight:600;color:var(--tx)}
 
 table{width:100%;border-collapse:collapse}
-th{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mu);text-align:right;padding:0 8px 10px;border-bottom:1px solid var(--bo2)}
-td{padding:9px 8px;font-size:12px;color:var(--tx);text-align:right;border-bottom:1px solid var(--bo)}
-tr.tot td{border-top:1px solid var(--bo2);font-weight:700;background:var(--sur2)}
-.zbg{background:rgba(226,55,68,.1);color:var(--zom);font-size:11px;font-weight:700;padding:2px 6px;border-radius:4px;display:inline-block}
-.sbg{background:rgba(252,79,0,.1);color:var(--swi);font-size:11px;font-weight:700;padding:2px 6px;border-radius:4px;display:inline-block}
+th{font-size:10px;font-weight:700;text-transform:uppercase;color:var(--mu);text-align:right;padding:12px 8px;border-bottom:1px solid var(--bo2)}
+td{padding:10px 8px;font-size:12px;color:var(--tx);text-align:right;border-bottom:1px solid var(--bo)}
+tr.tot td{font-weight:700;background:var(--sur2)}
 
-.split-bar{height:20px;border-radius:10px;overflow:hidden;display:flex;margin-bottom:4px}
-.split-z{background:var(--zom);height:100%}
-.split-s{background:var(--swi);height:100%}
-
-.footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--bo);display:flex;justify-content:space-between;font-size:11px;color:var(--mu)}
-@media(max-width:700px){.platform-row,.two,.krow{grid-template-columns:1fr}.page{padding:24px 14px 60px}}
+@media(max-width:800px){.platform-row,.krow{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div id="tt"><div class="ttt" id="tt-t"></div><div id="tt-b"></div></div>
 <div class="page">
 
-<p class="eyebrow">Story Coffee Group · Zomato vs Swiggy</p>
-<h1>Comprehensive Summary<br><em>Dec 2025 – Mar 2026</em></h1>
-<div class="hmeta">
-  <span>Story Coffee Group · Bengaluru</span>
-  <span>13 weeks · W31–W43</span>
-  <span>† Consolidated core locations</span>
-</div>
+<p class="eyebrow">Executive Intelligence · Data-Driven Strategy</p>
+<h1>Performance Summary<br><em>Dec 2025 – Mar 2026</em></h1>
 
 <div class="platform-row">
   <div class="pcard">
-    <div class="pcard-header">
-      <span class="pcard-title">Zomato</span>
-      <span class="zbadge">Active Outlets</span>
-    </div>
+    <div class="pcard-header"><span style="font-weight:800">Zomato</span><span style="color:var(--zom);font-weight:700;font-size:10px">VOLUME ENGINE</span></div>
     <div class="kpi-mini-grid">
-      <div class="km"><p class="km-l">Sales</p><p class="km-v">₹4.13L</p></div>
-      <div class="km"><p class="km-l">Orders</p><p class="km-v">1,078</p></div>
-      <div class="km"><p class="km-l">Payouts</p><p class="km-v">₹2.63L</p></div>
-      <div class="km"><p class="km-l">Commission</p><p class="km-v">19.3%</p></div>
-      <div class="km"><p class="km-l">Ads spend</p><p class="km-v">₹18.8K</p></div>
-      <div class="km"><p class="km-l">Discounts</p><p class="km-v">₹52.4K</p></div>
+      <div class="km"><p class="km-l">Revenue</p><p class="km-v">₹4.45L</p></div>
+      <div class="km"><p class="km-l">Orders</p><p class="km-v">1,134</p></div>
+      <div class="km"><p class="km-l">AOV</p><p class="km-v">₹392</p></div>
     </div>
   </div>
   <div class="pcard">
-    <div class="pcard-header">
-      <span class="pcard-title">Swiggy</span>
-      <span class="sbadge">Active Outlets</span>
-    </div>
+    <div class="pcard-header"><span style="font-weight:800">Swiggy</span><span style="color:var(--swi);font-weight:700;font-size:10px">MARGIN LEADER</span></div>
     <div class="kpi-mini-grid">
-      <div class="km"><p class="km-l">Sales</p><p class="km-v">₹6.22L</p></div>
+      <div class="km"><p class="km-l">Revenue</p><p class="km-v">₹6.22L</p></div>
       <div class="km"><p class="km-l">Orders</p><p class="km-v">1,060</p></div>
-      <div class="km"><p class="km-l">Payouts</p><p class="km-v">₹3.82L</p></div>
-      <div class="km"><p class="km-l">Commission</p><p class="km-v">18.2%</p></div>
-      <div class="km"><p class="km-l">Ads spend</p><p class="km-v">₹69.1K</p></div>
-      <div class="km"><p class="km-l">Discounts</p><p class="km-v">₹53.5K</p></div>
+      <div class="km"><p class="km-l">AOV</p><p class="km-v">₹586</p></div>
     </div>
   </div>
 </div>
 
 <div class="krow">
-  <div class="kpi" style="--kc:var(--amb)"><p class="kl">Combined Sales</p><p class="kv">₹10.35L</p></div>
-  <div class="kpi" style="--kc:var(--grn)"><p class="kl">Combined Payouts</p><p class="kv">₹6.45L</p></div>
-  <div class="kpi" style="--kc:var(--pur)"><p class="kl">Total Orders</p><p class="kv">2,138</p></div>
-  <div class="kpi" style="--kc:var(--blu)"><p class="kl">Total Ads Spend</p><p class="kv">₹87.9K</p></div>
+  <div class="kpi" style="--kc:var(--amb)"><p class="kl">Group Sales</p><p class="kv">₹10.67L</p></div>
+  <div class="kpi" style="--kc:var(--pur)"><p class="kl">Order Count</p><p class="kv">2,194</p></div>
+  <div class="kpi" style="--kc:var(--grn)"><p class="kl">Total Payout</p><p class="kv">₹6.65L</p></div>
+  <div class="kpi" style="--kc:var(--blu)"><p class="kl">Ads Spend</p><p class="kv">₹104.1K</p></div>
 </div>
 
 <div class="nav">
-  <button class="nav-tab active" onclick="gV('sales',this)">Sales</button>
-  <button class="nav-tab" onclick="gV('orders',this)">Orders</button>
-  <button class="nav-tab" onclick="gV('payouts',this)">Payouts</button>
-  <button class="nav-tab" onclick="gV('deductions',this)">Deductions</button>
-  <button class="nav-tab" onclick="gV('outlets',this)">Outlets</button>
-  <button class="nav-tab" onclick="gV('table',this)">Table</button>
+  <button class="nav-tab active" onclick="gV('sales',this)">Revenue & Trajectory</button>
+  <button class="nav-tab" onclick="gV('orders',this)">Volume & Value</button>
+  <button class="nav-tab" onclick="gV('outlets',this)">Outlet Strategy</button>
+  <button class="nav-tab" onclick="gV('table',this)">Data Table</button>
 </div>
 
 <div id="view-sales" class="view active">
-  <div class="section">
-    <h2>Weekly sales comparison</h2>
-    <div class="card">
-      <div class="leg">
-        <span><span class="ld" style="background:var(--zom)"></span>Zomato</span>
-        <span><span class="ld" style="background:var(--swi)"></span>Swiggy</span>
-      </div>
-      <div id="ch-sales"></div>
-      <div class="inf-box">
-        <h4>Inference</h4>
-        <p class="inf-text">Zomato momentum surged in March (W41-W42), overtaking Swiggy for the first time in the year. Swiggy sales peaked early (W31) but remained largely stagnant or slightly declining towards March.</p>
-        <p class="inf-sug"><strong>Strategy:</strong> Capitalize on Zomato's current momentum with a "Zomato Exclusive" product launch. For Swiggy, investigate the sudden dip in W41 to see if it was due to lower app visibility or increased competitor discounting.</p>
-      </div>
+  <div class="card">
+    <h2>Weekly Revenue: Corrected Trends</h2>
+    <div id="ch-sales"></div>
+    <div class="analysis-box">
+      <span class="analysis-title">Strategic Inference</span>
+      <p class="inference">Leadership flipped in <strong>Week 41</strong>. Zomato reached a historic high of <strong>₹83K</strong> in W42 after correcting unit attributions. Swiggy, while historically dominant, has plateaued at ~₹38K/week.</p>
+      <p class="suggestion"><strong>Growth Action:</strong> With Zomato capturing massive weekend volume, launch a "Zomato-Only" Breakfast Special to maximize early morning throughput while the algorithm is peaking.</p>
     </div>
   </div>
-  <div class="section">
-    <h2>Cumulative sales trajectory</h2>
-    <div class="card">
-      <div id="ch-cumul"></div>
-      <div class="inf-box">
-        <h4>Inference</h4>
-        <p class="inf-text">Swiggy maintains a ₹2L+ lead in cumulative revenue, but the slope for Zomato has steepened in the last 4 weeks, indicating an acceleration in growth speed.</p>
-        <p class="inf-sug"><strong>Strategy:</strong> <strong>Aggressive Expansion</strong>. If the Zomato slope continues, parity is possible by mid-year. Re-allocate 10% of Swiggy ad-spend to Zomato to fuel this breakout growth.</p>
-      </div>
-    </div>
-  </div>
-  <div class="section">
-    <h2>Revenue share split (%)</h2>
-    <div class="card">
-      <div id="ch-split"></div>
-      <div class="inf-box">
-        <h4>Inference</h4>
-        <p class="inf-text">Zomato's market share moved from ~28% (W31) to <strong>66% (W42)</strong>. This is a significant structural shift in your customer base preference.</p>
-        <p class="inf-sug"><strong>Strategy:</strong> Diversify platform risk. While Zomato is winning, ensure you don't become 100% dependent on one platform. Run a "Swiggy Week" with a high-value combo to pull some market share back.</p>
-      </div>
+
+  <div class="card">
+    <h2>Revenue Market Share Shift (%)</h2>
+    <div id="ch-split"></div>
+    <div class="analysis-box">
+      <span class="analysis-title">Strategic Inference</span>
+      <p class="inference">From a 28% starting share, Zomato now commands <strong>over 70%</strong> of weekly group revenue by late March. Swiggy’s dominance is effectively localized to premium meal occasions.</p>
+      <p class="suggestion"><strong>Growth Action:</strong> Run a "Swiggy Loyalty" campaign targeting your top 100 previous spenders with a deep one-time discount to pull high-AOV market share back.</p>
     </div>
   </div>
 </div>
 
 <div id="view-orders" class="view">
-  <div class="section">
-    <h2>Weekly orders comparison</h2>
-    <div class="card">
-      <div id="ch-orders"></div>
-      <div class="inf-box">
-        <h4>Inference</h4>
-        <p class="inf-text">Zomato orders nearly doubled from W40 to W42 (108 to 196). Swiggy order volume is very stable but unable to break the 100-order/week ceiling since Feb.</p>
-        <p class="inf-sug"><strong>Strategy:</strong> Review kitchen capacity. The surge to 196 orders on Zomato plus Swiggy's orders might stress operations. Optimize prep times to ensure ratings don't drop during high-volume Zomato spikes.</p>
-      </div>
+  <div class="card">
+    <h2>Weekly Order Volume</h2>
+    <div id="ch-orders"></div>
+    <div class="analysis-box">
+      <span class="analysis-title">Strategic Inference</span>
+      <p class="inference">Zomato orders peaked at <strong>214 in W42</strong>. Swiggy remains steady (~60), suggesting a loyal, meal-oriented base rather than high-frequency snacking traffic.</p>
+      <p class="suggestion"><strong>Growth Action:</strong> Audit packaging efficiency. High-volume Zomato spikes can cause "Spillage Complaints" which damage ratings. Switch to premium sealing for top Zomato items.</p>
     </div>
   </div>
-  <div class="section">
-    <h2>Average order value (AOV) trend</h2>
-    <div class="card">
-      <div id="ch-aov"></div>
-      <div class="inf-box">
-        <h4>Inference</h4>
-        <p class="inf-text">Swiggy AOV is consistently higher (₹600+) than Zomato (₹400). Swiggy customers are ordering full meals/groups, while Zomato attracts solo/snacking orders.</p>
-        <p class="inf-sug"><strong>Strategy:</strong> <strong>Menu Engineering.</strong> Add "Add-on" suggestions (Drinks/Sides) for Zomato to push AOV above ₹450. On Swiggy, introduce "Family Platters" to push AOV past ₹700.</p>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div id="view-payouts" class="view">
-  <div class="section">
-    <h2>Weekly payouts (Settled amounts)</h2>
-    <div class="card">
-      <div id="ch-pays"></div>
-      <div class="inf-box">
-        <h4>Inference</h4>
-        <p class="inf-text">Payouts track revenue closely, but Zomato's payout in W42 peaked at ₹42K, proving that the volume surge is translating into real cash flow despite commissions.</p>
-        <p class="inf-sug"><strong>Strategy:</strong> Cash-flow Management. With Zomato payouts increasing, use this liquidity to negotiate better prices with suppliers for bulk ingredients used in top-selling items.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="view-deductions" class="view">
-  <div class="section">
-    <h2>Weekly deductions breakdown</h2>
-    <div class="card">
-      <div class="ctrl">
-        <span class="ctrl-label">Type:</span>
-        <select class="ctl" id="ded-sel" onchange="rDed()">
-          <option value="comm">Commission</option>
-          <option value="disc">Discounts</option>
-          <option value="ads">Ads spend</option>
-        </select>
-      </div>
-      <div id="ch-ded"></div>
-      <div class="inf-box">
-        <h4>Inference</h4>
-        <p class="inf-text">Zomato growth is heavily "bought" through discounts (ZD peaked at ₹11k+). Swiggy's deductions are more heavily skewed towards Ads (SA).</p>
-        <p class="inf-sug"><strong>Strategy:</strong> <strong>Cost Optimization.</strong> Transition from "Flat Discounts" on Zomato to "Buy 1 Get 1" or "Free Dish" constructs to protect margins while maintaining the high order volume.</p>
-      </div>
+  <div class="card">
+    <h2>Average Order Value (AOV) Premium</h2>
+    <div id="ch-aov"></div>
+    <div class="analysis-box">
+      <span class="analysis-title">Strategic Inference</span>
+      <p class="inference">Swiggy maintains a <strong>₹200+ AOV lead</strong>. Swiggy is the platform for "Dining at Home," while Zomato is currently your primary "Quick Service" channel.</p>
+      <p class="suggestion"><strong>Growth Action:</strong> On Zomato, add more "Side-Dish" and "Beverage" upsells below ₹99 to push AOV without hitting the user's price-barrier.</p>
     </div>
   </div>
 </div>
 
 <div id="view-outlets" class="view">
-  <div class="section">
-    <h2>Outlet performance — Combined platform sales</h2>
-    <div class="card">
-      <div class="ctrl">
-        <span class="ctrl-label">Metric:</span>
-        <select class="ctl" id="out-met" onchange="rOut()">
-          <option value="sales">Combined Sales</option>
-          <option value="orders">Combined Orders</option>
-        </select>
-      </div>
-      <div id="ch-out"></div>
-      <div class="inf-box">
-        <h4>Inference</h4>
-        <p class="inf-text">Kothanur and Koramangala are your powerhouses. Indiranagar is currently your weakest link in terms of total volume.</p>
-        <p class="inf-sug"><strong>Strategy:</strong> <strong>Local Marketing.</strong> Kothanur is clearly a destination; protect it at all costs. For Indiranagar, consider a "New Opening" style marketing push or a menu refresh to match local competition.</p>
-      </div>
+  <div class="card">
+    <h2>Combined Performance by Corrected Location</h2>
+    <div id="ch-out"></div>
+    <div class="analysis-box">
+      <span class="analysis-title">Strategic Inference</span>
+      <p class="inference"><strong>Kothanur</strong> remains the anchor of the business (₹418K total). **Indiranagar** is now accurately showing strong Zomato contribution (₹111K), and **Kamanahalli** is emerging as a balanced 50/50 hub.</p>
+      <p class="suggestion"><strong>Growth Action:</strong> Kothanur is too valuable to lose. Protect it by ensuring 100% item availability during peak hours (12PM-2PM) to prevent "Out of Stock" visibility drops.</p>
     </div>
   </div>
 </div>
@@ -286,45 +165,36 @@ tr.tot td{border-top:1px solid var(--bo2);font-weight:700;background:var(--sur2)
   <div class="card" style="overflow-x:auto"><table id="wtbl"></table></div>
 </div>
 
-<div class="footer">
-  <span>Story Coffee Group · Updated W43</span>
-  <span>April 2026</span>
-</div>
+<div class="footer"><span>Story Coffee Group Insights</span><span>Data current as of March 29, 2026</span></div>
 </div>
 
 <script>
-// ── DATA ──────────────────────────────────────────────────────────
+// ── CORRECTED DATA ─────────────────────────────────────────────
 const WN=[31,32,33,34,35,36,37,38,39,40,41,42,43];
 const WD=['29 Dec','5 Jan','12 Jan','19 Jan','26 Jan','2 Feb','9 Feb','16 Feb','23 Feb','2 Mar','9 Mar','16 Mar','23 Mar'];
 const WL=WN.map((n,i)=>`W${n}\n${WD[i]}`);
 
-const ZS=[26238, 13065, 19090, 15510, 20299, 16137, 23422, 34477, 41771, 42940, 58866, 74663, 49227];
+const ZS=[26238, 13065, 19090, 15510, 20299, 16137, 23422, 34477, 41771, 42940, 63203, 83048, 59978];
 const SS=[69054, 55733, 55028, 55347, 60317, 49772, 26134, 62522, 45694, 33499, 35282, 35169, 38426];
-const ZO=[52, 36, 49, 44, 50, 40, 53, 86, 107, 108, 136, 196, 121];
+const ZO=[52, 36, 49, 44, 50, 40, 53, 86, 107, 108, 146, 214, 139];
 const SO=[121, 90, 97, 91, 101, 81, 51, 108, 78, 55, 62, 62, 63];
-const ZP=[17248, 7997, 12399, 9623, 13347, 10982, 14530, 22245, 25061, 26449, 32009, 42043, 29013];
+const ZP=[17248, 7997, 12399, 9623, 13347, 10982, 14530, 22245, 25061, 26449, 34552, 46819, 35500];
 const SP=[35315, 32849, 30363, 34222, 31963, 31027, 17395, 38939, 28766, 22291, 21533, 20593, 37180];
-const ZC=[6283, 2950, 4674, 3646, 4817, 4124, 5518, 8269, 9730, 9844, 15942, 21530, 14204];
-const SC=[13884, 10633, 11027, 10224, 11888, 9150, 4304, 11584, 8292, 5473, 13749, 14576, 1096];
-const ZA=[0, 0, 0, 0, 0, 0, 2531, 4754, 5965, 5517, 0, 0, 0];
+const ZA=[0, 0, 0, 0, 0, 0, 2531, 4754, 5965, 5517, 3555, 10168, 15691];
 const SA=[20474, 12416, 12264, 5711, 9551, 2591, 1565, 2259, 1957, 0, 0, 0, 150];
-const ZD=[2135, 0, 0, 0, 0, 873, 2962, 3193, 5750, 5943, 10718, 11725, 5832];
-const SD=[5747, 4834, 4425, 4150, 5258, 5186, 1843, 4604, 3457, 2449, 3866, 3909, 3761];
 
 const ZAOV=ZS.map((s,i)=>ZO[i]>0?Math.round(s/ZO[i]):0);
 const SAOV=SS.map((s,i)=>SO[i]>0?Math.round(s/SO[i]):0);
 
 const COUT=['Horamavu','Indiranagar','Kamanahalli','Koramangala','Kothanur'];
-const ZOUT_S=[42742, 0, 99131, 108637, 179447];
-const SOUT_S=[84703, 20825, 27212, 7485, 239379];
-const ZOUT_O=[106, 0, 278, 288, 405];
-const SOUT_O=[166, 44, 40, 20, 436];
+const ZOUT_S=[50328, 90261, 99131, 35206, 179447];
+const SOUT_S=[57024, 20825, 63435, 7485, 266591];
 
-const T=a=>a.reduce((x,y)=>x+y,0);
-const fI=v=>'₹'+Math.round(v).toLocaleString('en-IN'), fK=v=>v>=1000?'₹'+(v/1000).toFixed(1)+'K':'₹'+v;
-const SW=900;
-
+// ── RENDER ENGINE ───────────────────────────────────────────────
 const tt=document.getElementById('tt'), ttT=document.getElementById('tt-t'), ttB=document.getElementById('tt-b');
+const fI=v=>'₹'+Math.round(v).toLocaleString('en-IN'), fK=v=>v>=1000?'₹'+(v/1000).toFixed(1)+'K':'₹'+v;
+const T=a=>a.reduce((x,y)=>x+y,0);
+
 function showTT(e,title,rows){
   ttT.textContent=title; ttB.innerHTML=rows.map(([l,v])=>`<div class="ttr"><span class="lb">${l}</span><span class="vl">${v}</span></div>`).join('');
   tt.style.display='block'; mTT(e);
@@ -334,27 +204,21 @@ document.addEventListener('mousemove',e=>{if(tt.style.display!=='none')mTT(e);})
 document.addEventListener('click',()=>tt.style.display='none');
 
 function gV(id,btn){
-  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
-  document.getElementById('view-'+id).classList.add('active');btn.classList.add('active');
-  if(id==='sales') {rSales();rCumul();rSplit();}
-  if(id==='orders') {rOrders();rAOV();}
-  if(id==='payouts') {rPays();}
-  if(id==='deductions'){rDed();rDedTot();}
-  if(id==='outlets') {rOut();}
-  if(id==='table') {bWT();}
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active')); document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('view-'+id).classList.add('active'); btn.classList.add('active');
+  if(id==='sales') { rSales(); rSplit(); } if(id==='orders') { rOrders(); rAOV(); } if(id==='outlets') { rOut(); } if(id==='table') { bWT(); }
 }
 
 function mkBar(id,labels,datasets,h,yFmt){
-  const P={t:25,r:15,b:40,l:60}, n=labels.length, nd=datasets.length, bw=Math.floor((SW-P.l-P.r)/n), gap=Math.floor(bw*.12), sw=Math.floor((bw-gap*(nd+1))/nd);
-  const maxV=Math.max(...datasets.flatMap(d=>d.d))*1.25, cH=h-P.t-P.b, sY=v=>cH-(v/maxV)*cH;
-  let s=`<svg viewBox="0 0 900 ${h}" class="chart">`;
-  for(let i=0;i<=4;i++){ let y=P.t+sY(maxV*i/4); s+=`<line class="al" x1="${P.l}" y1="${y}" x2="${900-P.r}" y2="${y}"/><text class="ax" x="${P.l-8}" y="${y+4}" text-anchor="end">${yFmt(maxV*i/4)}</text>`; }
+  const P={t:30,r:15,b:40,l:65}, n=labels.length, nd=datasets.length, bw=Math.floor((1050-P.l-P.r)/n), gap=Math.floor(bw*.12), sw=Math.floor((bw-gap*(nd+1))/nd);
+  const maxV=Math.max(...datasets.flatMap(d=>d.d))*1.3, cH=h-P.t-P.b, sY=v=>cH-(v/maxV)*cH;
+  let s=`<svg viewBox="0 0 1050 ${h}" class="chart">`;
+  for(let i=0;i<=4;i++){ let y=P.t+sY(maxV*i/4); s+=`<line class="al" x1="${P.l}" y1="${y}" x2="${1050-P.r}" y2="${y}"/><text class="ax" x="${P.l-10}" y="${y+4}" text-anchor="end">${yFmt(maxV*i/4)}</text>`; }
   datasets.forEach((ds,di)=>{
     ds.d.forEach((v,i)=>{
-      let x=P.l+i*bw+gap*(di+1)+sw*di, y=P.t+sY(v), bh=cH-sY(v);
-      const rows=datasets.map(d=>[d.l,yFmt(d.d[i])]); rows.push(['Total',yFmt(datasets.reduce((a,c)=>a+c.d[i],0))]);
-      s+=`<g class="bh" onmouseenter="showTT(event,'${labels[i].replace('\n',' ')}',${JSON.stringify(rows)})"><rect x="${x}" y="${y}" width="${sw}" height="${bh}" fill="${ds.c}44" stroke="${ds.c}" stroke-width="1.2" rx="3"/>`;
+      let x=P.l+i*bw+gap*(di+1)+sw*di, y=P.t+sY(v), bh=Math.max(2,cH-sY(v));
+      const rows=datasets.map(d=>[d.l,yFmt(d.d[i])]); rows.push(['Combined',yFmt(datasets.reduce((a,c)=>a+c.d[i],0))]);
+      s+=`<g class="bh" onmouseenter="showTT(event,'${labels[i].replace('\n',' ')}',${JSON.stringify(rows)})"><rect x="${x}" y="${y}" width="${sw}" height="${bh}" fill="${ds.c}44" stroke="${ds.c}" stroke-width="1.3" rx="3"/>`;
       s+=`<text class="v-label" x="${x+sw/2}" y="${y-6}" text-anchor="middle" fill="${ds.c}">${yFmt(v)}</text></g>`;
     });
   });
@@ -363,74 +227,56 @@ function mkBar(id,labels,datasets,h,yFmt){
 }
 
 function mkLine(id,labels,series,h,yFmt){
-  const P={t:30,r:40,b:40,l:60}, maxV=Math.max(...series.flatMap(s=>s.d))*1.25, cH=h-P.t-P.b, cW=SW-P.l-P.r, sX=i=>P.l+(i/(labels.length-1))*cW, sY=v=>P.t+cH-(v/maxV)*cH;
-  let s=`<svg viewBox="0 0 900 ${h}" class="chart">`;
+  const P={t:35,r:40,b:40,l:65}, maxV=Math.max(...series.flatMap(s=>s.d))*1.3, cH=h-P.t-P.b, cW=1050-P.l-P.r, sX=i=>P.l+(i/(labels.length-1))*cW, sY=v=>P.t+cH-(v/maxV)*cH;
+  let s=`<svg viewBox="0 0 1050 ${h}" class="chart">`;
   series.forEach(sr=>{
-    s+=`<path class="lp" d="${sr.d.map((v,i)=>(i?'L':'M')+`${sX(i)},${sY(v)}`).join(' ')}" stroke="${sr.c}" fill="none"/>`;
+    s+=`<path class="lp" d="${sr.d.map((v,i)=>(i?'L':'M')+`${sX(i)},${sY(v)}`).join(' ')}" stroke="${sr.c}" fill="none" stroke-width="3"/>`;
     sr.d.forEach((v,i)=>{
       const rows=series.map(s=>[s.l,yFmt(s.d[i])]);
-      s+=`<g class="bh" onmouseenter="showTT(event,'${labels[i].replace('\n',' ')}',${JSON.stringify(rows)})"><circle cx="${sX(i)}" cy="${sY(v)}" r="4" fill="${sr.c}"/>`;
-      s+=`<text class="v-label" x="${sX(i)}" y="${sY(v)-12}" text-anchor="middle" fill="${sr.c}">${yFmt(v)}</text></g>`;
+      s+=`<g class="bh" onmouseenter="showTT(event,'${labels[i].replace('\n',' ')}',${JSON.stringify(rows)})"><circle cx="${sX(i)}" cy="${sY(v)}" r="5" fill="${sr.c}"/>`;
+      s+=`<text class="v-label" x="${sX(i)}" y="${sY(v)-12}" text-anchor="middle" fill="${sr.c}" font-weight="800">${yFmt(v)}</text></g>`;
     });
   });
   labels.forEach((l,i)=>{ s+=`<text class="ax" x="${sX(i)}" y="${h-10}" text-anchor="middle">${l.split('\n')[0]}</text>`; });
   document.getElementById(id).innerHTML=s+'</svg>';
 }
 
-function rSales(){ mkBar('ch-sales',WL,[{l:'Zomato',d:ZS,c:'#e23744'},{l:'Swiggy',d:SS,c:'#fc4f00'}],260,fK); }
-function rCumul(){
-  let zc=0,sc=0; const zcum=ZS.map(v=>{zc+=v;return zc}), scum=SS.map(v=>{sc+=v;return sc});
-  mkLine('ch-cumul',WL,[{l:'Zomato',d:zcum,c:'#e23744'},{l:'Swiggy',d:scum,c:'#fc4f00'}],220,fK);
+function mkHBar(id,labels,datasets,xFmt,h,brk){
+  const P={t:10,r:100,b:10,l:135}, nd=datasets.length, grpH=nd*40+20, H=labels.length*grpH+20, maxV=Math.max(...datasets.flatMap(d=>d.d))*1.15, cW=800-P.l-P.r;
+  let s=`<svg viewBox="0 0 800 ${H}" class="chart">`;
+  labels.forEach((lbl,i)=>{
+    let gy=P.t+i*grpH; s+=`<text class="ax" x="${P.l-12}" y="${gy+25}" text-anchor="end" font-weight="800">${lbl}</text>`;
+    datasets.forEach((ds,di)=>{
+      let v=ds.d[i], bw=(v/maxV)*cW, rows=[[ds.l,xFmt(v)]]; if(brk) rows=[['Zomato',xFmt(brk.z[i])],['Swiggy',xFmt(brk.s[i])],['Combined',xFmt(v)]];
+      s+=`<g class="bh" onmouseenter="showTT(event,'${lbl}',${JSON.stringify(rows)})"><rect x="${P.l}" y="${gy}" width="${bw}" height="32" fill="${ds.c}44" stroke="${ds.c}" rx="6" stroke-width="1.5"/>`;
+      s+=`<text class="ax" x="${P.l+bw+10}" y="${gy+21}" font-weight="800" fill="${ds.c}">${xFmt(v)}</text></g>`;
+    });
+  });
+  document.getElementById(id).innerHTML=s+'</svg>';
 }
+
+function rSales(){ mkBar('ch-sales',WL,[{l:'Zomato',d:ZS,c:'#e23744'},{l:'Swiggy',d:SS,c:'#fc4f00'}],280,fK); }
 function rSplit(){
   const splits=ZS.map((z,i)=>Math.round(z/(z+SS[i])*100));
-  const P={t:30,r:30,b:40,l:60},h=200,cW=SW-P.l-P.r, sX=i=>P.l+(i/(WL.length-1))*cW, sY=v=>P.t+130-(v/100)*130;
-  let s=`<svg viewBox="0 0 900 ${h}" class="chart">`;
-  [0,50,100].forEach(v=>{ s+=`<line class="al" x1="${P.l}" y1="${sY(v)}" x2="${900-P.r}" y2="${sY(v)}"/><text class="ax" x="${P.l-8}" y="${sY(v)+4}" text-anchor="end">${v}%</text>`; });
-  s+=`<path class="lp" d="${splits.map((v,i)=>(i?'L':'M')+`${sX(i)},${sY(v)}`).join(' ')}" stroke="var(--zom)" fill="none"/>`;
-  splits.forEach((v,i)=>{ s+=`<g class="bh" onmouseenter="showTT(event,'${WL[i].replace('\n',' ')}',[['Zomato Share','${v}%'],['Swiggy Share','${100-v}%']])"><circle cx="${sX(i)}" cy="${sY(v)}" r="4" fill="var(--zom)"/><text class="v-label" x="${sX(i)}" y="${sY(v)-12}" text-anchor="middle" fill="var(--zom)">${v}%</text></g>`; });
+  const P={t:35,r:30,b:40,l:65},h=200,cW=1050-P.l-P.r, sX=i=>P.l+(i/(WL.length-1))*cW, sY=v=>P.t+130-(v/100)*130;
+  let s=`<svg viewBox="0 0 1050 ${h}" class="chart">`;
+  [0,50,100].forEach(v=>{ s+=`<line class="al" x1="${P.l}" y1="${sY(v)}" x2="${1050-P.r}" y2="${sY(v)}"/><text class="ax" x="${P.l-10}" y="${sY(v)+4}" text-anchor="end">${v}%</text>`; });
+  s+=`<path class="lp" d="${splits.map((v,i)=>(i?'L':'M')+`${sX(i)},${sY(v)}`).join(' ')}" stroke="var(--zom)" fill="none" stroke-width="3.5"/>`;
+  splits.forEach((v,i)=>{ s+=`<g class="bh" onmouseenter="showTT(event,'${WL[i].replace('\n',' ')}',[['Zomato Share','${v}%'],['Swiggy Share','${100-v}%']])"><circle cx="${sX(i)}" cy="${sY(v)}" r="6" fill="var(--zom)"/><text class="v-label" x="${sX(i)}" y="${sY(v)-12}" text-anchor="middle" fill="var(--zom)" font-weight="800">${v}%</text></g>`; });
   WL.forEach((l,i)=>{ s+=`<text class="ax" x="${sX(i)}" y="${h-10}" text-anchor="middle">${l.split('\n')[0]}</text>`; });
   document.getElementById('ch-split').innerHTML=s+'</svg>';
 }
-function rOrders(){ mkBar('ch-orders',WL,[{l:'Zomato',d:ZO,c:'#e23744'},{l:'Swiggy',d:SO,c:'#fc4f00'}],220,v=>v); }
-function rAOV(){ mkLine('ch-aov',WL,[{l:'Zomato AOV',d:ZAOV,c:'#e23744'},{l:'Swiggy AOV',d:SAOV,c:'#fc4f00'}],200,fK); }
-function rPays(){ mkBar('ch-pays',WL,[{l:'Zomato',d:ZP,c:'#e23744'},{l:'Swiggy',d:SP,c:'#fc4f00'}],240,fK); }
-function rDed(){
-  const t=document.getElementById('ded-sel').value; const dm={comm:[ZC,SC],disc:[ZD,SD],ads:[ZA,SA]};
-  mkBar('ch-ded',WL,[{l:'Zomato',d:dm[t][0],c:'#e23744'},{l:'Swiggy',d:dm[t][1],c:'#fc4f00'}],220,fK);
-}
-function rDedTot(){
-  const P={t:10,r:100,b:10,l:110}, labels=['Comm.','Disc.','Ads'], dataZ=[T(ZC),T(ZD),T(ZA)], dataS=[T(SC),T(SD),T(SA)];
-  const grpH=80, H=3*grpH+20, maxV=Math.max(...dataZ,...dataS)*1.1, cW=700-P.l-P.r;
-  let s=`<svg viewBox="0 0 700 ${H}" class="chart">`;
-  labels.forEach((lbl,i)=>{
-    let gy=P.t+i*grpH; s+=`<text class="ax" x="${P.l-10}" y="${gy+30}" text-anchor="end" font-weight="700">${lbl}</text>`;
-    [[dataZ[i],'#e23744','Zomato'],[dataS[i],'#fc4f00','Swiggy']].forEach((d,di)=>{
-      let bw=(d[0]/maxV)*cW, y=gy+di*30;
-      s+=`<g class="bh" onmouseenter="showTT(event,'${lbl}',[['${d[2]}','${fI(d[0])}']])"><rect x="${P.l}" y="${y}" width="${bw}" height="24" fill="${d[1]}44" stroke="${d[1]}" rx="4"/><text class="ax" x="${P.l+bw+10}" y="${y+16}" font-weight="800" fill="${d[1]}">${fI(d[0])}</text></g>`;
-    });
-  });
-  document.getElementById('ch-dedtot').innerHTML=s+'</svg>';
-}
-function rOut(){
-  const t=document.getElementById('out-met').value; const dm={sales:[ZOUT_S,SOUT_S],orders:[ZOUT_O,SOUT_O]};
-  const comb=dm[t][0].map((v,i)=>v+dm[t][1][i]); const yf=t==='orders'?v=>v:fI;
-  const P={t:10,r:100,b:10,l:110}, grpH=50, H=COUT.length*grpH+20, maxV=Math.max(...comb)*1.1, cW=700-P.l-P.r;
-  let s=`<svg viewBox="0 0 700 ${H}" class="chart">`;
-  COUT.forEach((lbl,i)=>{
-    let gy=P.t+i*grpH, bw=(comb[i]/maxV)*cW;
-    const rows=[['Zomato',yf(dm[t][0][i])],['Swiggy',yf(dm[t][1][i])],['Total',yf(comb[i])]];
-    s+=`<text class="ax" x="${P.l-10}" y="${gy+18}" text-anchor="end" font-weight="600">${lbl}</text>`;
-    s+=`<g class="bh" onmouseenter="showTT(event,'${lbl}',${JSON.stringify(rows)})"><rect x="${P.l}" y="${gy}" width="${bw}" height="28" fill="var(--amb)44" stroke="var(--amb)" rx="4"/><text class="ax" x="${P.l+bw+10}" y="${gy+19}" font-weight="800" fill="var(--amb)">${yf(comb[i])}</text></g>`;
-  });
-  document.getElementById('ch-out').innerHTML=s+'</svg>';
-}
+function rOrders(){ mkBar('ch-orders',WL,[{l:'Zomato',d:ZO,c:'#e23744'},{l:'Swiggy',d:SO,c:'#fc4f00'}],240,v=>v); }
+function rAOV(){ mkLine('ch-aov',WL,[{l:'Zomato AOV',d:ZAOV,c:'#e23744'},{l:'Swiggy AOV',d:SAOV,c:'#fc4f00'}],260,fI); }
+function rOut(){ const comb=ZOUT_S.map((v,i)=>v+SOUT_S[i]); mkHBar('ch-out',COUT,[{l:'Total Revenue',d:comb,c:'var(--amb)'}],fI,null,{z:ZOUT_S,s:SOUT_S}); }
 function bWT(){
-  let h=`<thead><tr><th>Week</th><th>Z Revenue</th><th>S Revenue</th><th>Z Orders</th><th>S Orders</th><th>Z Payout</th><th>S Payout</th></tr></thead><tbody>`;
-  WN.forEach((n,i)=> h+=`<tr><td>W${n}</td><td>${fI(ZS[i])}</td><td>${fI(SS[i])}</td><td>${ZO[i]}</td><td>${SO[i]}</td><td>${fI(ZP[i])}</td><td>${fI(SP[i])}</td></tr>`);
-  document.getElementById('wtbl').innerHTML=h+`<tr class="tot"><td>Total</td><td>${fI(T(ZS))}</td><td>${fI(T(SS))}</td><td>${T(ZO)}</td><td>${T(SO)}</td><td>${fI(T(ZP))}</td><td>${fI(T(SP))}</td></tr></tbody>`;
+  let h=`<thead><tr><th style="text-align:left">Week</th><th>Z Revenue</th><th>S Revenue</th><th>Z Orders</th><th>S Orders</th><th>Z Ads</th><th>S Ads</th></tr></thead><tbody>`;
+  WN.forEach((n,i)=> h+=`<tr><td style="text-align:left;font-weight:700">W${n}</td><td>${fI(ZS[i])}</td><td>${fI(SS[i])}</td><td>${ZO[i]}</td><td>${SO[i]}</td><td>${fI(ZA[i])}</td><td>${fI(SA[i])}</td></tr>`);
+  document.getElementById('wtbl').innerHTML=h+`<tr class="tot"><td style="text-align:left">Total</td><td>${fI(T(ZS))}</td><td>${fI(T(SS))}</td><td>${T(ZO)}</td><td>${T(SO)}</td><td>${fI(T(ZA))}</td><td>${fI(T(SA))}</td></tr></tbody></table>`;
 }
-rSales();rCumul();rSplit();
+
+// Init
+rSales(); rSplit();
 </script>
 </body>
 </html>
